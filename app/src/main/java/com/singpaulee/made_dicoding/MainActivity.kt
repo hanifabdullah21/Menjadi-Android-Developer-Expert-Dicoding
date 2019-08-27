@@ -1,6 +1,4 @@
-import com.singpaulee.made_dicoding.R
-
-em package com.singpaulee.made_dicoding
+package com.singpaulee.made_dicoding
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
