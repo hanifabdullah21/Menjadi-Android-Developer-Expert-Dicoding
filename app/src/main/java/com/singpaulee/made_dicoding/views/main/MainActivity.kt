@@ -1,7 +1,9 @@
-package com.singpaulee.made_dicoding
+package com.singpaulee.made_dicoding.views.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.singpaulee.made_dicoding.R
+
 
 class MainActivity : AppCompatActivity() {
 
