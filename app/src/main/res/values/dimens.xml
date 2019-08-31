@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="textsize_head1">@dimen/_96sdp</dimen>
+    <dimen name="textsize_head2">@dimen/_60ssp</dimen>
+    <dimen name="textsize_head3">@dimen/_48ssp</dimen>
+    <dimen name="textsize_head4">@dimen/_34ssp</dimen>
+    <dimen name="textsize_head5">@dimen/_24ssp</dimen>
+    <dimen name="textsize_head6">@dimen/_20ssp</dimen>
+    <dimen name="textsize_subtitle1">@dimen/_16ssp</dimen>
+    <dimen name="textsize_subtitle2">@dimen/_14ssp</dimen>
+    <dimen name="textsize_body1">@dimen/_16ssp</dimen>
+    <dimen name="textsize_body2">@dimen/_14ssp</dimen>
+    <dimen name="textsize_button">@dimen/_14ssp</dimen>
+    <dimen name="textsize_caption">@dimen/_12ssp</dimen>
+    <dimen name="textsize_overline">@dimen/_10ssp</dimen>
+
+
+    <dimen name="mp_2">@dimen/_2sdp</dimen>
+    <dimen name="mp_4">@dimen/_4sdp</dimen>
+    <dimen name="mp_6">@dimen/_6sdp</dimen>
+    <dimen name="mp_8">@dimen/_8sdp</dimen>
+    <dimen name="mp_10">@dimen/_10sdp</dimen>
+    <dimen name="mp_12">@dimen/_12sdp</dimen>
+    <dimen name="mp_14">@dimen/_14sdp</dimen>
+    <dimen name="mp_16">@dimen/_16sdp</dimen>
+    <dimen name="mp_18">@dimen/_18sdp</dimen>
+    <dimen name="mp_20">@dimen/_20sdp</dimen>
+    <dimen name="mp_22">@dimen/_22sdp</dimen>
+
+</resources>
