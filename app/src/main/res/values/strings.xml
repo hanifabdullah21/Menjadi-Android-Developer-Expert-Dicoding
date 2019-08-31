@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">MADE-Dicoding</string>
+    <string name="string_dma_popularity">Popularitas</string>
+    <string name="string_dma_rating">Peringkat</string>
+    <string name="string_dma_vote_count">Divoting</string>
+    <string name="string_dma_add_favorite">Tambahkan Favorit</string>
+    <string name="string_dma_remove_favorite">Hapus Favorit</string>
+    <string name="string_dma_adult">18+</string>
+    <string name="string_dma_overview">Ringkasan</string>
 </resources>
