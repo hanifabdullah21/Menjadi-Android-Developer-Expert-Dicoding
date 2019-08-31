@@ -1,11 +1,41 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="DefaultWidthHeight">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="ViewGroupInfo" parent="DefaultWidthHeight">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <!--Used for title of popularity, vote, vote average-->
+    <style name="StyleTitleInfo" parent="DefaultWidthHeight">
+        <item name="android:textSize">@dimen/textsize_subtitle2</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--Used for body of popularity, vote, vote average-->
+    <style name="StyleBodyInfo" parent="StyleTitleInfo">
+        <item name="android:textSize">@dimen/textsize_head6</item>
+    </style>
+
+    <style name="LineInfo">
+        <item name="android:layout_width">@dimen/_1sdp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">@dimen/mp_4</item>
+        <item name="android:layout_marginBottom">@dimen/mp_4</item>
+        <item name="android:background">@color/colorWhite</item>
     </style>
 
 </resources>
