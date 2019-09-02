@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dark_cinema"
+    tools:context=".views.detailmovie.DetailMovieActivity">
+
+    <RelativeLayout
+        android:id="@+id/dma_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/mp_10">
+
+        <ImageView
+            android:id="@+id/dma_iv_backdrop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerInside" />
+
+        <ImageView
+            android:id="@+id/dma_iv_poster"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_180sdp"
+            android:layout_alignStart="@id/dma_iv_backdrop"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/mp_10"
+            android:layout_marginTop="@dimen/_70sdp"
+            android:scaleType="centerInside"
+            android:src="@color/colorBlack" />
+
+        <LinearLayout
+            android:layout_alignTop="@id/dma_iv_poster"
+            android:id="@+id/dma_viewgroup_adult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@id/dma_iv_poster"
+            android:gravity="center_vertical">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="lottie_atention.json"
+                app:lottie_loop="true" />
+
+            <TextView
+                android:layout_marginEnd="@dimen/mp_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_dma_adult"
+                android:textSize="@dimen/textsize_subtitle1"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/dma_tv_title"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/mp_10"
+            android:layout_toEndOf="@id/dma_iv_poster"
+            android:textAllCaps="true"
+            android:layout_below="@id/dma_viewgroup_adult"
+            android:textSize="@dimen/textsize_head6"
+            android:textStyle="bold"
+            tools:text="Judulnya Panjang Banget Bro" />
+
+        <TextView
+            android:id="@+id/dma_tv_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dma_tv_title"
+            android:layout_marginStart="@dimen/mp_10"
+            android:layout_marginTop="@dimen/mp_4"
+            android:layout_toEndOf="@id/dma_iv_poster"
+            android:textSize="@dimen/textsize_subtitle1"
+            android:textStyle="bold"
+            tools:text="2019" />
+
+        <TextView
+            android:id="@+id/dma_tv_favorite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dma_tv_year"
+            android:layout_margin="@dimen/mp_10"
+            android:layout_toEndOf="@id/dma_iv_poster"
+            android:background="@drawable/shape_add_favorite"
+            android:drawableStart="@drawable/ic_add"
+            android:gravity="center"
+            android:padding="@dimen/mp_4"
+            android:text="@string/string_dma_add_favorite"
+            android:textSize="@dimen/textsize_overline" />
+
+        <!--Duration-->
+        <TextView
+            android:id="@+id/dma_tv_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dma_iv_poster"
+            android:layout_marginTop="@dimen/mp_20"
+            android:drawableStart="@drawable/ic_duration"
+            android:drawablePadding="@dimen/mp_8"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textsize_subtitle2"
+            tools:text="118 menit" />
+
+        <!--Information-->
+        <LinearLayout
+            android:id="@+id/dma_viewgroup_information"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dma_tv_duration"
+            android:layout_marginTop="@dimen/mp_20">
+
+            <LinearLayout style="@style/ViewGroupInfo">
+
+                <TextView
+                    style="@style/StyleTitleInfo"
+                    android:text="@string/string_dma_popularity" />
+
+                <TextView
+                    android:id="@+id/dma_tv_popularity"
+                    style="@style/StyleBodyInfo"
+                    tools:text="136" />
+
+            </LinearLayout>
+
+            <View style="@style/LineInfo" />
+
+            <LinearLayout style="@style/ViewGroupInfo">
+
+                <TextView
+                    style="@style/StyleTitleInfo"
+                    android:text="@string/string_dma_rating" />
+
+                <TextView
+                    android:id="@+id/dma_tv_rating"
+                    style="@style/StyleBodyInfo"
+                    tools:text="136" />
+
+            </LinearLayout>
+
+            <View style="@style/LineInfo" />
+
+            <LinearLayout style="@style/ViewGroupInfo">
+
+                <TextView
+                    style="@style/StyleTitleInfo"
+                    android:text="@string/string_dma_vote_count" />
+
+                <TextView
+                    android:id="@+id/dma_tv_vote_count"
+                    style="@style/StyleBodyInfo"
+                    tools:text="136" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_below="@id/dma_viewgroup_information"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/mp_20">
+
+            <TextView
+                android:id="@+id/dma_tv_title_overview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/string_dma_overview"
+                android:textSize="@dimen/textsize_subtitle2"
+                android:textColor="@color/colorWhite"/>
+
+            <View
+                android:id="@+id/dma_line_overview"
+                android:layout_below="@id/dma_tv_title_overview"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/colorWhite"
+                android:layout_alignStart="@id/dma_tv_title_overview"
+                android:layout_alignEnd="@id/dma_tv_title_overview" />
+
+            <TextView
+                android:id="@+id/dma_tv_overview"
+                android:layout_below="@id/dma_line_overview"
+                android:layout_marginTop="@dimen/mp_4"
+                android:layout_marginStart="@dimen/mp_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textsize_body2"
+                android:textColor="@color/colorWhite"
+                tools:text="Ini adalah contoh ringkasan dari abad ke 291 masehi hahahahaha hscabcakshcaljcvhas cabcakhcka"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

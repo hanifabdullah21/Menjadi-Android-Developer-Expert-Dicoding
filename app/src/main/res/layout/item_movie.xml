@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_100sdp"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginLeft="@dimen/mp_6"
+    android:layout_marginTop="@dimen/mp_2"
+    android:layout_marginRight="@dimen/mp_6"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/_5sdp"
+    app:cardElevation="@dimen/_5sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_itemview_cinema"
+        android:padding="@dimen/mp_10">
+
+        <ImageView
+            android:id="@+id/im_iv_image"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:src="@drawable/ic_picture_placeholder" />
+
+        <TextView
+            android:id="@+id/im_tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/mp_10"
+            android:textColor="@color/colorWhite"
+            android:layout_toEndOf="@id/im_iv_image"
+            android:textSize="@dimen/textsize_subtitle1"
+            tools:text="Judul Movie" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_below="@id/im_tv_title"
+            android:layout_marginStart="@dimen/mp_10"
+            android:layout_marginTop="@dimen/mp_6"
+            android:layout_toEndOf="@id/im_iv_image"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_fileName="lottie_stars.json" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
