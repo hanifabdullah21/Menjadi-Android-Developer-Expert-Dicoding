@@ -19,6 +19,8 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            buildConfigField "String", 'BASEURL', "\"https://api.themoviedb.org/3/\""
         }
         debug{
             minifyEnabled false
@@ -28,6 +30,8 @@ android {
                     outputFileName = "MADE ${variant.versionName}.apk"
                 }
             }
+
+            buildConfigField "String", 'BASEURL', "\"https://api.themoviedb.org/3/\""
         }
     }
 }
