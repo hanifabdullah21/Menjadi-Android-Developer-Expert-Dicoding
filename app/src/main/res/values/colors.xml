@@ -6,4 +6,6 @@
 
     <color name="colorWhite">#FFF</color>
     <color name="colorBlack">#86000000</color>
+
+    <color name="colorUnselectedText">#616161</color>
 </resources>
