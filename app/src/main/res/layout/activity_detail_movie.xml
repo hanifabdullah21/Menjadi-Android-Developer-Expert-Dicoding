@@ -69,6 +69,9 @@
             android:layout_below="@id/dma_viewgroup_adult"
             android:textSize="@dimen/textsize_head6"
             android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:lines="2"
+            android:ellipsize="end"
             tools:text="Judulnya Panjang Banget Bro" />
 
         <TextView
@@ -80,7 +83,8 @@
             android:layout_marginTop="@dimen/mp_4"
             android:layout_toEndOf="@id/dma_iv_poster"
             android:textSize="@dimen/textsize_subtitle1"
-            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="sans-serif-light"
             tools:text="2019" />
 
         <TextView

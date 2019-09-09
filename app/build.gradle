@@ -21,6 +21,8 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
 
             buildConfigField "String", 'BASEURL', "\"https://api.themoviedb.org/3/\""
+            buildConfigField "String", 'BASEURLIMAGE', "\"https://image.tmdb.org/t/p/original\""
+            buildConfigField "String", 'APIKEY', "\"bfcc1f88effce12d8b802ed55c126aec\""
         }
         debug {
             minifyEnabled false
@@ -32,6 +34,8 @@ android {
             }
 
             buildConfigField "String", 'BASEURL', "\"https://api.themoviedb.org/3/\""
+            buildConfigField "String", 'BASEURLIMAGE', "\"https://image.tmdb.org/t/p/original\""
+            buildConfigField "String", 'APIKEY', "\"bfcc1f88effce12d8b802ed55c126aec\""
         }
     }
 }
@@ -57,6 +61,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
     implementation 'io.reactivex.rxjava2:rxkotlin:2.2.0'
+    implementation "io.reactivex.rxjava2:rxjava:2.2.0"
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
     implementation 'com.jakewharton.rxbinding2:rxbinding:2.1.1'
 

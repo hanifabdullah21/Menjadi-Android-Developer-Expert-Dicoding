@@ -10,7 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object NetworkConfig {
 
-    fun retrofitConfig(context: Context): Retrofit {
+    fun retrofitConfig(): Retrofit {
 
         val gson = GsonBuilder().setLenient().create()
 

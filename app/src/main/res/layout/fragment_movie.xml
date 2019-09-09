@@ -1,16 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/dark_cinema"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".views.fragmentmovie.MovieFragment">
 
-    <TextView
-        android:id="@+id/mf_tv_test"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mf_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/mf_lottie_loading"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
+        app:lottie_fileName="lottie_loading_video.json"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:layout_centerInParent="true"/>
+
+    <include
+        android:id="@+id/mf_view_error"
+        layout="@layout/view_error"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textSize="@dimen/_24ssp"
-        android:text="@string/hello_blank_fragment" />
+        android:visibility="gone"/>
 
-</FrameLayout>
+</RelativeLayout>

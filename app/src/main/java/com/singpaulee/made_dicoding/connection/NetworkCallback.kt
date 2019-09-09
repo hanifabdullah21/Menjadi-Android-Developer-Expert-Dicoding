@@ -1,14 +1,13 @@
 package com.singpaulee.made_dicoding.connection
 
 import android.util.Log
-import org.reactivestreams.Subscriber
-import org.reactivestreams.Subscription
+import io.reactivex.Observer
 import retrofit2.HttpException
 
 
-abstract class NetworkCallback<M> : Subscriber<M> {
+abstract class NetworkCallback<M> : Observer<M> {
 
-    private val TAG = NetworkCallback::class.java.name
+    private val tag = NetworkCallback::class.java.name
 
     abstract fun onSuccess(model: M)
 
@@ -20,24 +19,19 @@ abstract class NetworkCallback<M> : Subscriber<M> {
         onFinish()
     }
 
-    override fun onSubscribe(s: Subscription?) {
-
-    }
-
     override fun onNext(t: M) {
         onSuccess(t)
     }
 
-    override fun onError(t: Throwable?) {
-        t?.printStackTrace()
-        if (t is HttpException) {
-            val httpException = t as HttpException
-            val code = httpException.code()
-            val message = httpException.localizedMessage.toString()
-            Log.i(TAG, "code : $code")
+    override fun onError(e: Throwable) {
+        e.printStackTrace()
+        if (e is HttpException) {
+            val code = e.code()
+            val message = e.localizedMessage.toString()
+            Log.i(tag, "code : $code")
             onFailure(message)
         } else {
-            onFailure(t?.localizedMessage.toString())
+            onFailure(e.localizedMessage.toString())
         }
         onFinish()
     }

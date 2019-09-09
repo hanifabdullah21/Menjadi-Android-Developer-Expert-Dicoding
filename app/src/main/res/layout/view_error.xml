@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/ve_lottie_error"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_centerHorizontal="true"
+        app:lottie_fileName="lottie_error.json"
+        android:layout_marginTop="@dimen/_100sdp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_repeatMode="restart"/>
+
+    <TextView
+        android:id="@+id/ve_tv_error_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ve_lottie_error"
+        android:layout_marginTop="@dimen/mp_10"
+        android:gravity="center"
+        android:textSize="@dimen/textsize_subtitle1"
+        android:textColor="@color/colorWhite"
+        tools:text="ERROR" />
+
+    <Button
+        android:id="@+id/ve_btn_try_again"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ve_tv_error_message"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/mp_10"
+        android:text="@string/string_try_again"
+        android:textSize="@dimen/textsize_button" />
+
+</RelativeLayout>

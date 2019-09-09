@@ -1,7 +1,10 @@
 package com.singpaulee.made_dicoding.model
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class DescriptionMovieModel(
 
     @field:SerializedName("status_message")
@@ -74,7 +77,7 @@ data class DescriptionMovieModel(
     val voteAverage: Double? = null,
 
     @field:SerializedName("belongs_to_collection")
-    val belongsToCollection: Any? = null,
+    val belongsToCollection: BelongsToCollectionModel? = null,
 
     @field:SerializedName("tagline")
     val tagline: String? = null,
@@ -87,4 +90,4 @@ data class DescriptionMovieModel(
 
     @field:SerializedName("status")
     val status: String? = null
-)
+) : Parcelable
