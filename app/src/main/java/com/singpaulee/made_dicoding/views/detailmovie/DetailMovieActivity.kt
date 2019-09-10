@@ -12,6 +12,7 @@ import com.singpaulee.made_dicoding.bank.ConstantTemplate
 import com.singpaulee.made_dicoding.model.DescriptionMovieModel
 import kotlinx.android.synthetic.main.activity_detail_movie.*
 import org.jetbrains.anko.toast
+import java.util.*
 
 
 class DetailMovieActivity : AppCompatActivity(), DetailMovieView {
@@ -29,7 +30,9 @@ class DetailMovieActivity : AppCompatActivity(), DetailMovieView {
         movie = intent.getParcelableExtra(ConstantTemplate.ARG_MOVIE)
 
         onAttachView()
-        presenter?.getDetailMovie(movie?.id, "id")
+
+        val language = Locale.getDefault().language
+        presenter?.getDetailMovie(movie?.id, language)
 
         setDetailMovie()
     }

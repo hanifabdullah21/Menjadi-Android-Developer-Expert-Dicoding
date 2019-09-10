@@ -13,6 +13,7 @@ import com.singpaulee.made_dicoding.helper.HelperClass
 import com.singpaulee.made_dicoding.model.DescriptionTvModel
 import kotlinx.android.synthetic.main.activity_detail_tv.*
 import org.jetbrains.anko.toast
+import java.util.*
 
 class DetailTvActivity : AppCompatActivity(), DetailTvView {
 
@@ -28,7 +29,9 @@ class DetailTvActivity : AppCompatActivity(), DetailTvView {
         tv = intent.getParcelableExtra(ConstantTemplate.ARG_TV)
 
         onAttachView()
-        presenter?.getDetailTv(tv?.id, "id")
+
+        val language = Locale.getDefault().language
+        presenter?.getDetailTv(tv?.id, language)
 
         setDetailTv()
     }

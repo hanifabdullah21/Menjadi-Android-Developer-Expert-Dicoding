@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MADE-Dicoding</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="string_dma_add_favorite">Add to favorite</string>
+    <string name="string_dma_adult">18+</string>
+    <string name="string_dma_overview">Overview</string>
+    <string name="string_dma_popularity">Popularity</string>
+    <string name="string_dma_rating">Ranking</string>
+    <string name="string_dma_remove_favorite">Delete favorite</string>
+    <string name="string_dma_vote_count">Voted</string>
+    <string name="string_dtva_add_favorite">Add to favorite</string>
+    <string name="string_dtva_episode">Episode</string>
+    <string name="string_dtva_last_episode_airing">Last episode airing</string>
+    <string name="string_dtva_next_episode_airing">Next episode airing</string>
+    <string name="string_dtva_overview">Overview</string>
+    <string name="string_dtva_popularity">Popularity</string>
+    <string name="string_dtva_rating">Ranking</string>
+    <string name="string_dtva_remove_favorite">Delete Favorite</string>
+    <string name="string_dtva_vote_count">Voted</string>
+    <string name="string_last_airing_has_not_exist">Last episode airing not exist</string>
+    <string name="string_next_airing_has_not_exist">Next episode airing not exist</string>
+    <string name="string_overview_episode_tv_has_not_exist">This episode overview in Englis not exist</string>
+    <string name="string_overview_has_not_exist">This overview in English not exist</string>
+    <string name="string_overview_tv_has_not_exist">This overview in English not exist</string>
+    <string name="string_tablayout_title_movie">Movie</string>
+    <string name="string_tablayout_title_tv">Tv</string>
+    <string name="string_try_again">Try Again</string>
+    <string name="string_dtva_adult">18+</string>
+</resources>

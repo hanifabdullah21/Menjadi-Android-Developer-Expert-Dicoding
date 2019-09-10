@@ -9,7 +9,7 @@ import com.singpaulee.made_dicoding.views.base.Presenter
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import java.util.logging.Handler
+import java.util.*
 
 
 class ListMoviePresenter : Presenter<ListMovieView> {
@@ -27,15 +27,16 @@ class ListMoviePresenter : Presenter<ListMovieView> {
         this.listMovieView = null
     }
 
-    fun getListMovieOrTvShow(type: String?){
-        when(type){
+    fun getListMovieOrTvShow(type: String?) {
+        when (type) {
             ConstantTemplate.ARG_MOVIE -> getListMovieNowPlaying()
             ConstantTemplate.ARG_TV -> getListTvAiringToday()
         }
     }
 
     private fun getListTvAiringToday() {
-        val observable = apiNetwork?.getListTvAiringToday(BuildConfig.APIKEY, "id")
+        val language = Locale.getDefault().language
+        val observable = apiNetwork?.getListTvAiringToday(BuildConfig.APIKEY, language)
 
         if (compositeDisposable == null) {
             compositeDisposable = CompositeDisposable()
@@ -60,7 +61,8 @@ class ListMoviePresenter : Presenter<ListMovieView> {
 
     @SuppressLint("CheckResult")
     private fun getListMovieNowPlaying() {
-        val observable = apiNetwork?.getListMovieNowPlaying(BuildConfig.APIKEY, "ID", "id")
+        val language = Locale.getDefault().language
+        val observable = apiNetwork?.getListMovieNowPlaying(BuildConfig.APIKEY, "ID", language)
 
         if (compositeDisposable == null) {
             compositeDisposable = CompositeDisposable()

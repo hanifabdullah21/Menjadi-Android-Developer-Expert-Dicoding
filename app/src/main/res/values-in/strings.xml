@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MADE-Dicoding</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="string_dma_add_favorite">Tambahkan Favorit</string>
+    <string name="string_dma_adult">18+</string>
+    <string name="string_dma_overview">Ringkasan</string>
+    <string name="string_dma_popularity">Popularitas</string>
+    <string name="string_dma_rating">Peringkat</string>
+    <string name="string_dma_remove_favorite">Hapus Favorit</string>
+    <string name="string_dma_vote_count">Divoting</string>
+    <string name="string_dtva_add_favorite">Tambahkan Favorit</string>
+    <string name="string_dtva_adult">18+</string>
+    <string name="string_dtva_episode">Episode</string>
+    <string name="string_dtva_last_episode_airing">Episode terakhir yang tayang</string>
+    <string name="string_dtva_next_episode_airing">Episode selanjutnya yang tayang</string>
+    <string name="string_dtva_overview">Ringkasan</string>
+    <string name="string_dtva_popularity">Popularitas</string>
+    <string name="string_dtva_rating">Peringkat</string>
+    <string name="string_dtva_remove_favorite">Hapus Favorit</string>
+    <string name="string_dtva_vote_count">Divoting</string>
+    <string name="string_last_airing_has_not_exist">Tidak ada episode terakhir yang pernah tayang.</string>
+    <string name="string_next_airing_has_not_exist">Tidak ada episode selanjutnya yang akan tayang</string>
+    <string name="string_overview_episode_tv_has_not_exist">Episode tayangan tv ini tidak ada ringkasan dalam bahasa Indonesia</string>
+    <string name="string_overview_has_not_exist">Film ini tidak ada ringkasan dalam bahasa Indonesia</string>
+    <string name="string_overview_tv_has_not_exist">Tayangan tv ini tidak ada ringkasan dalam bahasa Indonesia</string>
+    <string name="string_tablayout_title_movie">Movie</string>
+    <string name="string_tablayout_title_tv">Tv</string>
+    <string name="string_try_again">Coba lagi</string>
+</resources>
