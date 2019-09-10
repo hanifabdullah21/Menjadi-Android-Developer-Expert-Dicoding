@@ -42,7 +42,6 @@ class DetailMovieActivity : AppCompatActivity(), DetailMovieView {
             .into(dma_iv_poster)
 
         val backdrop = movie?.backdropPath ?: movie?.posterPath
-        Log.d("DetailMovie", backdrop)
         Glide.with(this)
             .load(BuildConfig.BASEURLIMAGE + "$backdrop")
             .placeholder(R.drawable.ic_picture_placeholder)

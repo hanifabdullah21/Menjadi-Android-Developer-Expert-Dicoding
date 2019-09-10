@@ -10,6 +10,6 @@ interface ItemviewAdapterListener {
     }
 
     interface TvListener{
-        fun onTvOnClickListener(model: DescriptionTvModel)
+        fun onTvOnClickListener(model: DescriptionTvModel?)
     }
 }

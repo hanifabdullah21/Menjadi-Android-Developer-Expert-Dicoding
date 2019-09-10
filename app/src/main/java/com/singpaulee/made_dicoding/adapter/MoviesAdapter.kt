@@ -13,7 +13,8 @@ import com.singpaulee.made_dicoding.model.DescriptionMovieModel
 import kotlinx.android.synthetic.main.item_movie.view.*
 import org.jetbrains.anko.sdk27.coroutines.onClick
 
-class MoviesAdapter(private val list: ArrayList<DescriptionMovieModel>?, val context: Context?, private val movieListener: ItemviewAdapterListener.MovieListener) :
+class MoviesAdapter(private val list: ArrayList<DescriptionMovieModel>?, val context: Context?,
+                    private val movieListener: ItemviewAdapterListener.MovieListener) :
     RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
 
     lateinit var itemView: View

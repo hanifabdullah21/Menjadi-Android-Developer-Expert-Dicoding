@@ -1,7 +1,10 @@
 package com.singpaulee.made_dicoding.model
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class NetworkModel(
 
     @field:SerializedName("name")
@@ -15,4 +18,4 @@ data class NetworkModel(
 
     @field:SerializedName("origin_country")
     val origin_country: String? = null
-)
+) : Parcelable

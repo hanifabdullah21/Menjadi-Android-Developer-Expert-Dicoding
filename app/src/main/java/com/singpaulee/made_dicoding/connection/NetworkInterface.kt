@@ -31,9 +31,9 @@ interface NetworkInterface {
         @Query("language") language: String
     ): Observable<ResponseListTvModel?>
 
-    @GET("tv/{tv_id}")
+    @GET("tv/{id}")
     fun getDetailTv(
-        @Path("id") tvId: Int,
+        @Path("id") tvId: Int?,
         @Query("api_key") apiKey: String,
         @Query("language") language: String
     ): Observable<DescriptionTvModel?>

@@ -16,6 +16,7 @@ import com.singpaulee.made_dicoding.listener.ItemviewAdapterListener
 import com.singpaulee.made_dicoding.model.DescriptionMovieModel
 import com.singpaulee.made_dicoding.model.DescriptionTvModel
 import com.singpaulee.made_dicoding.views.detailmovie.DetailMovieActivity
+import com.singpaulee.made_dicoding.views.detailtv.DetailTvActivity
 import kotlinx.android.synthetic.main.fragment_movie.view.*
 import kotlinx.android.synthetic.main.view_error.view.*
 import org.jetbrains.anko.support.v4.intentFor
@@ -61,7 +62,7 @@ class MovieFragment : Fragment(), ListMovieView, View.OnClickListener,
 
     override fun onShowListTv(listTv: ArrayList<DescriptionTvModel>?) {
         val lm = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
-        val adapter = TvAdapter(listTv, activity)
+        val adapter = TvAdapter(listTv, activity, this)
         rootView.mf_recyclerview.layoutManager = lm
         rootView.mf_recyclerview.adapter = adapter
         Log.d("TVSHOW", listTv.toString())
@@ -105,7 +106,7 @@ class MovieFragment : Fragment(), ListMovieView, View.OnClickListener,
         startActivity(intentFor<DetailMovieActivity>(ConstantTemplate.ARG_MOVIE to model))
     }
 
-    override fun onTvOnClickListener(model: DescriptionTvModel) {
-
+    override fun onTvOnClickListener(model: DescriptionTvModel?) {
+        startActivity(intentFor<DetailTvActivity>(ConstantTemplate.ARG_TV to model))
     }
 }

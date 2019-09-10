@@ -21,6 +21,14 @@ object HelperClass {
         return calendar.get(Calendar.YEAR).toString()
     }
 
+    @SuppressLint("SimpleDateFormat")
+    fun convertDateYmdToDmy(dateString: String?): String {
+        val inputFormat = SimpleDateFormat("yyyy-MM-dd")
+        val outputFormat = SimpleDateFormat("dd MMM yyyy")
+        val date = inputFormat.parse(dateString)
+        return outputFormat.format(date)
+    }
+
     /** This function to convert runtime minute to duration
      *
      * @return duration (ex:2j 5m)

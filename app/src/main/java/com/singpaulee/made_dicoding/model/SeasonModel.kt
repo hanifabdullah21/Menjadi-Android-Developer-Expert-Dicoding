@@ -1,7 +1,10 @@
 package com.singpaulee.made_dicoding.model
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class SeasonModel(
 
     @field:SerializedName("air_date") val air_date: String? = null,
@@ -12,4 +15,4 @@ data class SeasonModel(
     @field:SerializedName("poster_path") val poster_path: String? = null,
     @field:SerializedName("season_number") val season_number: Int? = null
 
-)
+) : Parcelable

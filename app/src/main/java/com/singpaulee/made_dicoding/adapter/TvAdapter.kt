@@ -8,10 +8,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.singpaulee.made_dicoding.BuildConfig
 import com.singpaulee.made_dicoding.R
+import com.singpaulee.made_dicoding.listener.ItemviewAdapterListener
 import com.singpaulee.made_dicoding.model.DescriptionTvModel
 import kotlinx.android.synthetic.main.item_movie.view.*
+import org.jetbrains.anko.sdk27.coroutines.onClick
 
-class TvAdapter(val list: ArrayList<DescriptionTvModel>?, val context: Context?) :
+class TvAdapter(val list: ArrayList<DescriptionTvModel>?, val context: Context?,
+                private val tvListener: ItemviewAdapterListener.TvListener) :
     RecyclerView.Adapter<TvAdapter.ViewHolder>() {
 
     lateinit var itemView: View
@@ -26,11 +29,14 @@ class TvAdapter(val list: ArrayList<DescriptionTvModel>?, val context: Context?)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(list?.get(position))
+        holder.bind(list?.get(position), tvListener)
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(descriptionTvModel: DescriptionTvModel?) {
+        fun bind(
+            descriptionTvModel: DescriptionTvModel?,
+            tvListener: ItemviewAdapterListener.TvListener
+        ) {
             Glide.with(itemView.context)
                 .load(BuildConfig.BASEURLIMAGE + "${descriptionTvModel?.poster_path}")
                 .placeholder(R.drawable.ic_picture_placeholder)
@@ -38,6 +44,10 @@ class TvAdapter(val list: ArrayList<DescriptionTvModel>?, val context: Context?)
                 .into(itemView.im_iv_image)
 
             itemView.im_tv_title.text = descriptionTvModel?.original_name.toString()
+
+            itemView.onClick {
+                tvListener.onTvOnClickListener(descriptionTvModel)
+            }
         }
     }
 
