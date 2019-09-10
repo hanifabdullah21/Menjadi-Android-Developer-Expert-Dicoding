@@ -20,7 +20,7 @@ interface NetworkInterface {
 
     @GET("movie/{id}")
     fun getDetailMovie(
-        @Path("id") movieId: Int,
+        @Path("id") movieId: Int?,
         @Query("api_key") apiKey: String,
         @Query("language") language: String
     ): Observable<DescriptionMovieModel?>

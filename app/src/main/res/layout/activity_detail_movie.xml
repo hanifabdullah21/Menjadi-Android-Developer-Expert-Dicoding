@@ -7,7 +7,7 @@
     android:background="@drawable/dark_cinema"
     tools:context=".views.detailmovie.DetailMovieActivity">
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/dma_relative_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +18,14 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_200sdp"
             android:layout_alignParentTop="true"
-            android:scaleType="centerInside" />
+            android:background="@color/colorPrimaryDark"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
         <ImageView
             android:id="@+id/dma_iv_poster"
@@ -26,20 +33,32 @@
             android:layout_height="@dimen/_180sdp"
             android:layout_alignStart="@id/dma_iv_backdrop"
             android:layout_centerHorizontal="true"
-            android:layout_marginStart="@dimen/mp_10"
+            android:layout_marginStart="@dimen/mp_4"
             android:layout_marginTop="@dimen/_70sdp"
             android:scaleType="centerInside"
-            android:src="@color/colorBlack" />
+            android:src="@color/colorBlack"
+            app:layout_constraintBottom_toBottomOf="@+id/dma_iv_backdrop"
+            app:layout_constraintLeft_toLeftOf="@id/dma_iv_backdrop"
+            app:layout_constraintTop_toTopOf="@+id/dma_iv_backdrop"
+            app:layout_constraintVertical_bias="0.369" />
 
         <LinearLayout
-            android:layout_alignTop="@id/dma_iv_poster"
             android:id="@+id/dma_viewgroup_adult"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:visibility="invisible"
+            android:layout_alignTop="@id/dma_iv_poster"
             android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/mp_4"
             android:layout_toEndOf="@id/dma_iv_poster"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/dma_iv_backdrop"
+            app:layout_constraintEnd_toEndOf="@+id/dma_iv_backdrop"
+            app:layout_constraintHorizontal_bias="0.048"
+            app:layout_constraintLeft_toRightOf="@id/dma_iv_poster"
+            app:layout_constraintStart_toEndOf="@+id/dma_iv_poster"
+            app:layout_constraintTop_toTopOf="@+id/dma_iv_poster"
+            app:layout_constraintVertical_bias="0.0">
 
             <com.airbnb.lottie.LottieAnimationView
                 android:layout_width="@dimen/_30sdp"
@@ -49,9 +68,9 @@
                 app:lottie_loop="true" />
 
             <TextView
-                android:layout_marginEnd="@dimen/mp_10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/mp_10"
                 android:text="@string/string_dma_adult"
                 android:textSize="@dimen/textsize_subtitle1"
                 android:textStyle="bold" />
@@ -60,18 +79,24 @@
 
         <TextView
             android:id="@+id/dma_tv_title"
-            android:layout_width="@dimen/_200sdp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="@dimen/mp_10"
-            android:layout_toEndOf="@id/dma_iv_poster"
-            android:textAllCaps="true"
             android:layout_below="@id/dma_viewgroup_adult"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/mp_4"
+            android:layout_toEndOf="@id/dma_iv_poster"
+            android:ellipsize="end"
+            android:gravity="bottom"
+            android:maxLines="2"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
             android:textSize="@dimen/textsize_head6"
             android:textStyle="bold"
-            android:textColor="@color/colorWhite"
-            android:lines="2"
-            android:ellipsize="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/dma_iv_poster"
+            app:layout_constraintTop_toBottomOf="@+id/dma_viewgroup_adult"
             tools:text="Judulnya Panjang Banget Bro" />
 
         <TextView
@@ -79,27 +104,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/dma_tv_title"
-            android:layout_marginStart="@dimen/mp_10"
-            android:layout_marginTop="@dimen/mp_4"
             android:layout_toEndOf="@id/dma_iv_poster"
-            android:textSize="@dimen/textsize_subtitle1"
-            android:textColor="@color/colorWhite"
             android:fontFamily="sans-serif-light"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textsize_subtitle1"
+            app:layout_constraintEnd_toEndOf="@+id/dma_tv_title"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/dma_tv_title"
+            app:layout_constraintTop_toBottomOf="@+id/dma_tv_title"
             tools:text="2019" />
-
-        <TextView
-            android:id="@+id/dma_tv_favorite"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/dma_tv_year"
-            android:layout_margin="@dimen/mp_10"
-            android:layout_toEndOf="@id/dma_iv_poster"
-            android:background="@drawable/shape_add_favorite"
-            android:drawableStart="@drawable/ic_add"
-            android:gravity="center"
-            android:padding="@dimen/mp_4"
-            android:text="@string/string_dma_add_favorite"
-            android:textSize="@dimen/textsize_overline" />
 
         <!--Duration-->
         <TextView
@@ -107,22 +120,51 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/dma_iv_poster"
-            android:layout_marginTop="@dimen/mp_20"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/mp_6"
             android:drawableStart="@drawable/ic_duration"
             android:drawablePadding="@dimen/mp_8"
-            android:layout_centerHorizontal="true"
             android:gravity="center_vertical"
             android:textColor="@color/colorWhite"
             android:textSize="@dimen/textsize_subtitle2"
+            app:layout_constraintEnd_toEndOf="@+id/dma_tv_title"
+            app:layout_constraintHorizontal_bias="0.115"
+            app:layout_constraintStart_toEndOf="@+id/dma_iv_poster"
+            app:layout_constraintTop_toBottomOf="@+id/dma_tv_year"
             tools:text="118 menit" />
 
         <!--Information-->
+        <TextView
+            android:id="@+id/dma_tv_favorite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dma_tv_year"
+            android:layout_marginStart="@dimen/mp_10"
+            android:layout_marginEnd="@dimen/mp_4"
+            android:layout_marginBottom="@dimen/mp_6"
+            android:layout_toEndOf="@id/dma_iv_poster"
+            android:background="@drawable/shape_add_favorite"
+            android:drawableStart="@drawable/ic_add"
+            android:gravity="center"
+            android:padding="@dimen/mp_4"
+            android:text="@string/string_dma_add_favorite"
+            android:textSize="@dimen/textsize_overline"
+            app:layout_constraintBottom_toBottomOf="@+id/dma_iv_poster"
+            app:layout_constraintEnd_toEndOf="@+id/dma_iv_backdrop"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/dma_iv_poster"
+            app:layout_constraintTop_toBottomOf="@+id/dma_tv_duration"
+            app:layout_constraintVertical_bias="1.0" />
+
         <LinearLayout
             android:id="@+id/dma_viewgroup_information"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/dma_tv_duration"
-            android:layout_marginTop="@dimen/mp_20">
+            android:layout_marginTop="@dimen/mp_20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dma_iv_poster">
 
             <LinearLayout style="@style/ViewGroupInfo">
 
@@ -170,42 +212,47 @@
         </LinearLayout>
 
         <RelativeLayout
-            android:layout_below="@id/dma_viewgroup_information"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/dma_viewgroup_information"
+            android:layout_marginTop="@dimen/mp_20"
             android:orientation="vertical"
-            android:layout_marginTop="@dimen/mp_20">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dma_viewgroup_information">
 
             <TextView
                 android:id="@+id/dma_tv_title_overview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/string_dma_overview"
-                android:textSize="@dimen/textsize_subtitle2"
-                android:textColor="@color/colorWhite"/>
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textsize_subtitle2" />
 
             <View
                 android:id="@+id/dma_line_overview"
-                android:layout_below="@id/dma_tv_title_overview"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_1sdp"
-                android:background="@color/colorWhite"
+                android:layout_below="@id/dma_tv_title_overview"
                 android:layout_alignStart="@id/dma_tv_title_overview"
-                android:layout_alignEnd="@id/dma_tv_title_overview" />
+                android:layout_alignEnd="@id/dma_tv_title_overview"
+                android:background="@color/colorWhite" />
 
             <TextView
                 android:id="@+id/dma_tv_overview"
-                android:layout_below="@id/dma_line_overview"
-                android:layout_marginTop="@dimen/mp_4"
-                android:layout_marginStart="@dimen/mp_6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/textsize_body2"
+                android:layout_below="@id/dma_line_overview"
+                android:layout_marginStart="@dimen/mp_6"
+                android:layout_marginTop="@dimen/mp_4"
                 android:textColor="@color/colorWhite"
-                tools:text="Ini adalah contoh ringkasan dari abad ke 291 masehi hahahahaha hscabcakshcaljcvhas cabcakhcka"/>
+                android:textSize="@dimen/textsize_body2"
+                android:justificationMode="inter_word"
+                tools:text="Ini adalah contoh ringkasan dari abad ke 291 masehi hahahahaha hscabcakshcaljcvhas cabcakhcka" />
 
         </RelativeLayout>
 
-    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

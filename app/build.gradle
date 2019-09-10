@@ -52,11 +52,20 @@ dependencies {
     implementation "org.jetbrains.anko:anko:0.10.8" //Anko
     implementation 'androidx.recyclerview:recyclerview:1.1.0-beta03'
     implementation 'androidx.cardview:cardview:1.0.0'
+
+    //loading animation
     implementation 'com.airbnb.android:lottie:3.0.7'
+    implementation 'com.ethanhua:skeleton:1.1.2'
+    implementation 'io.supercharge:shimmerlayout:2.1.0'
+
+    //place image
     implementation 'com.github.bumptech.glide:glide:4.9.0'
+
+    //sizing view and text
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
     implementation 'com.intuit.ssp:ssp-android:1.0.6'
 
+    //connection
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
