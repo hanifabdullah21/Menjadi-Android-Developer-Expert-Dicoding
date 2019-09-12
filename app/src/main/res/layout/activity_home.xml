@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dark_cinema"
+    tools:context=".HomeActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/string_main_menu"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/textsize_head5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/home_cv_list"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintVertical_bias="0.13999999">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:lines="2"
+            android:padding="@dimen/mp_4"
+            android:text="@string/string_list_movie_and_tv"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/textsize_subtitle2" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/home_cv_favorite"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_cv_list"
+        app:layout_constraintVertical_bias="0.05">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:lines="2"
+            android:padding="@dimen/mp_4"
+            android:text="@string/string_favorite"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/textsize_subtitle2" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/home_cv_setting"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_cv_favorite"
+        app:layout_constraintVertical_bias="0.05">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:lines="2"
+            android:padding="@dimen/mp_4"
+            android:text="@string/string_setting"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/textsize_subtitle2" />
+
+    </androidx.cardview.widget.CardView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_120sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_cv_setting"
+        app:layout_constraintVertical_bias="0.968"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="lotiie_dancing.json"
+        app:lottie_loop="true" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_120sdp"
+        app:layout_constraintBottom_toBottomOf="@id/textView"
+        app:layout_constraintHorizontal_bias="0.661"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="lottie_suparman.json"
+        app:lottie_loop="true" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

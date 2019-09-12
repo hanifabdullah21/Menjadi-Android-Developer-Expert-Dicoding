@@ -27,4 +27,9 @@
     <string name="string_tablayout_title_tv">Tv</string>
     <string name="string_try_again">Try Again</string>
     <string name="string_dtva_adult">18+</string>
+    <string name="string_main_menu">Menu Utama</string>
+    <string name="string_list_movie_and_tv">List Movie and Tv Show</string>
+    <string name="string_favorite">List Favorite \n Movie and Tv SHow</string>
+    <string name="string_setting">Pengaturan</string>
+    <string name="string_under_contsruction">Sorry, this feature is under construction</string>
 </resources>

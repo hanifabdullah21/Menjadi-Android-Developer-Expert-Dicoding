@@ -27,4 +27,9 @@
     <string name="string_tablayout_title_movie">Movie</string>
     <string name="string_tablayout_title_tv">Tv</string>
     <string name="string_try_again">Coba lagi</string>
+    <string name="string_main_menu">Menu Utama</string>
+    <string name="string_list_movie_and_tv">Daftar Film dan Tv Show</string>
+    <string name="string_favorite">Daftar Favorit \n Film dan Tv Show</string>
+    <string name="string_setting">Pengaturan</string>
+    <string name="string_under_contsruction">Sedang dalam pengembangan</string>
 </resources>
