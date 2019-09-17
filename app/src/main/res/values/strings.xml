@@ -36,4 +36,8 @@
     <string name="string_list_movie_and_tv">Daftar Film dan Tv Show</string>
     <string name="string_favorite">Daftar Favorit \n Film dan Tv Show</string>
     <string name="string_setting">Pengaturan</string>
+    <string name="string_language">Bahasa</string>
+    <string name="string_bahasa_indonesia">Bahasa Indonesia</string>
+    <string name="string_english">English</string>
+    <string name="string_save">Simpan</string>
 </resources>
