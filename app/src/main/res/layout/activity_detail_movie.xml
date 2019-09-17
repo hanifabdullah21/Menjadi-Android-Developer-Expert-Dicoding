@@ -42,7 +42,7 @@
             app:layout_constraintTop_toTopOf="@+id/dma_iv_backdrop"
             app:layout_constraintVertical_bias="0.369" />
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/dma_viewgroup_adult"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -50,7 +50,6 @@
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginEnd="@dimen/mp_4"
             android:layout_toEndOf="@id/dma_iv_poster"
-            android:gravity="center_vertical"
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="@+id/dma_iv_backdrop"
             app:layout_constraintEnd_toEndOf="@+id/dma_iv_backdrop"
@@ -61,8 +60,15 @@
             app:layout_constraintVertical_bias="0.0">
 
             <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/dma_lottie_eightheen"
                 android:layout_width="@dimen/_30sdp"
                 android:layout_height="@dimen/_30sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.011"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
                 app:lottie_autoPlay="true"
                 app:lottie_fileName="lottie_atention.json"
                 app:lottie_loop="true" />
@@ -70,12 +76,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/mp_10"
                 android:text="@string/string_dma_adult"
+                android:textColor="@color/colorWhite"
                 android:textSize="@dimen/textsize_subtitle1"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.313"
+                app:layout_constraintLeft_toLeftOf="@id/dma_lottie_eightheen"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.454" />
 
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
             android:id="@+id/dma_tv_title"
@@ -246,9 +258,9 @@
                 android:layout_below="@id/dma_line_overview"
                 android:layout_marginStart="@dimen/mp_6"
                 android:layout_marginTop="@dimen/mp_4"
+                android:justificationMode="inter_word"
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/textsize_body2"
-                android:justificationMode="inter_word"
                 tools:text="Ini adalah contoh ringkasan dari abad ke 291 masehi hahahahaha hscabcakshcaljcvhas cabcakhcka" />
 
         </RelativeLayout>
