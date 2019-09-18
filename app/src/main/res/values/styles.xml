@@ -16,6 +16,7 @@
     <style name="ViewGroupInfo" parent="DefaultWidthHeight">
         <item name="android:orientation">vertical</item>
         <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">wrap_content</item>
     </style>
 
     <!--Used for title of popularity, vote, vote average-->
@@ -32,7 +33,6 @@
 
     <style name="LineInfo">
         <item name="android:layout_width">@dimen/_1sdp</item>
-        <item name="android:layout_height">match_parent</item>
         <item name="android:layout_marginTop">@dimen/mp_4</item>
         <item name="android:layout_marginBottom">@dimen/mp_4</item>
         <item name="android:background">@color/colorWhite</item>
