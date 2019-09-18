@@ -223,7 +223,7 @@
 
         </LinearLayout>
 
-        <RelativeLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/dma_viewgroup_information"
@@ -240,16 +240,20 @@
                 android:layout_height="wrap_content"
                 android:text="@string/string_dma_overview"
                 android:textColor="@color/colorWhite"
-                android:textSize="@dimen/textsize_subtitle2" />
+                android:textSize="@dimen/textsize_subtitle2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
 
             <View
                 android:id="@+id/dma_line_overview"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="@dimen/_1sdp"
                 android:layout_below="@id/dma_tv_title_overview"
                 android:layout_alignStart="@id/dma_tv_title_overview"
                 android:layout_alignEnd="@id/dma_tv_title_overview"
-                android:background="@color/colorWhite" />
+                android:background="@color/colorWhite"
+                app:layout_constraintRight_toRightOf="@id/dma_tv_title_overview"
+                app:layout_constraintTop_toBottomOf="@id/dma_tv_title_overview"/>
 
             <TextView
                 android:id="@+id/dma_tv_overview"
@@ -261,9 +265,10 @@
                 android:justificationMode="inter_word"
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/textsize_body2"
-                tools:text="Ini adalah contoh ringkasan dari abad ke 291 masehi hahahahaha hscabcakshcaljcvhas cabcakhcka" />
+                tools:text="Ini adalah contoh ringkasan dari abad ke 291 masehi hahahahaha hscabcakshcaljcvhas cabcakhcka"
+                app:layout_constraintTop_toBottomOf="@id/dma_line_overview"/>
 
-        </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
