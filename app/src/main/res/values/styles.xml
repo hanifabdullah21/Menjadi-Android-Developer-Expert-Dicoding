@@ -65,6 +65,7 @@
         <item name="android:textSize">@dimen/textsize_subtitle2</item>
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:layout_marginStart">@dimen/mp_10</item>
+        <item name="android:layout_width">0dp</item>
     </style>
 
 </resources>
