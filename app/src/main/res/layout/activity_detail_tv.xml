@@ -103,312 +103,270 @@
             app:layout_constraintTop_toBottomOf="@+id/dtva_tv_year"
             app:layout_constraintVertical_bias="1.0" />
 
+
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/dtva_viewgroup_information"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/mp_20"
+            android:id="@+id/dtva_cl_popularity"
+            style="@style/ViewGroupInfo"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/dtva_cl_rating"
+            app:layout_constraintTop_toBottomOf="@id/dtva_iv_poster">
+
+            <TextView
+                android:id="@+id/dtva_tv_title_popularity"
+                style="@style/StyleTitleInfo"
+                android:text="@string/string_dtva_popularity"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/dtva_tv_popularity"
+                style="@style/StyleBodyInfo"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dtva_tv_title_popularity"
+                tools:text="136" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dtva_cl_rating"
+            style="@style/ViewGroupInfo"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/dtva_iv_poster">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/dtva_cl_popularity"
-                style="@style/ViewGroupInfo"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toLeftOf="@id/dtva_cl_rating"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <TextView
-                    android:id="@+id/dtva_tv_title_popularity"
-                    style="@style/StyleTitleInfo"
-                    android:text="@string/string_dtva_popularity"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/dtva_tv_popularity"
-                    style="@style/StyleBodyInfo"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/dtva_tv_title_popularity"
-                    tools:text="136" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/dtva_cl_rating"
-                style="@style/ViewGroupInfo"
-                app:layout_constraintBottom_toBottomOf="parent"
+            <TextView
+                android:id="@+id/dtva_tv_title_rating"
+                style="@style/StyleTitleInfo"
+                android:text="@string/string_dtva_rating"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/dtva_tv_title_rating"
-                    style="@style/StyleTitleInfo"
-                    android:text="@string/string_dtva_rating"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/dtva_tv_rating"
-                    style="@style/StyleBodyInfo"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/dtva_tv_title_rating"
-                    tools:text="136" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/dtva_cl_vote"
-                style="@style/ViewGroupInfo"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toRightOf="@id/dtva_view_two"
+            <TextView
+                android:id="@+id/dtva_tv_rating"
+                style="@style/StyleBodyInfo"
+                app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <TextView
-                    android:id="@+id/dtva_tv_title_vote_count"
-                    style="@style/StyleTitleInfo"
-                    android:text="@string/string_dtva_vote_count"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/dtva_tv_vote_count"
-                    style="@style/StyleBodyInfo"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/dtva_tv_title_vote_count"
-                    tools:text="136" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <View
-                android:id="@+id/dtva_view_one"
-                style="@style/LineInfo"
-                android:layout_height="0dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toRightOf="@id/dtva_cl_popularity"
-                app:layout_constraintRight_toLeftOf="@id/dtva_cl_rating"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <View
-                android:id="@+id/dtva_view_two"
-                style="@style/LineInfo"
-                android:layout_height="0dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toRightOf="@id/dtva_cl_rating"
-                app:layout_constraintRight_toLeftOf="@id/dtva_cl_vote"
-                app:layout_constraintTop_toTopOf="parent" />
-
+                app:layout_constraintTop_toBottomOf="@id/dtva_tv_title_rating"
+                tools:text="136" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/relativeLayout"
-            android:layout_width="match_parent"
+            android:id="@+id/dtva_cl_vote"
+            style="@style/ViewGroupInfo"
+            app:layout_constraintLeft_toRightOf="@id/dtva_view_two"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dtva_iv_poster">
+
+            <TextView
+                android:id="@+id/dtva_tv_title_vote_count"
+                style="@style/StyleTitleInfo"
+                android:text="@string/string_dtva_vote_count"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/dtva_tv_vote_count"
+                style="@style/StyleBodyInfo"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dtva_tv_title_vote_count"
+                tools:text="136" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/dtva_view_one"
+            style="@style/LineInfo"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/dtva_cl_popularity"
+            app:layout_constraintLeft_toRightOf="@id/dtva_cl_popularity"
+            app:layout_constraintRight_toLeftOf="@id/dtva_cl_rating"
+            app:layout_constraintTop_toTopOf="@id/dtva_cl_popularity" />
+
+        <View
+            android:id="@+id/dtva_view_two"
+            style="@style/LineInfo"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/dtva_cl_popularity"
+            app:layout_constraintLeft_toRightOf="@id/dtva_cl_rating"
+            app:layout_constraintRight_toLeftOf="@id/dtva_cl_vote"
+            app:layout_constraintTop_toTopOf="@id/dtva_cl_popularity" />
+
+
+        <!--OVERVIEW-->
+        <TextView
+            android:id="@+id/dtva_tv_title_overview"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/dtva_viewgroup_information"
             android:layout_marginTop="@dimen/mp_20"
-            android:orientation="vertical"
-            app:layout_constraintHorizontal_bias="0.0"
+            android:text="@string/string_dtva_overview"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textsize_subtitle2"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dtva_viewgroup_information"
-            app:layout_constraintVertical_bias="0.0">
+            app:layout_constraintTop_toBottomOf="@id/dtva_cl_popularity" />
 
-            <TextView
-                android:id="@+id/dtva_tv_title_overview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/string_dtva_overview"
-                android:textColor="@color/colorWhite"
-                android:textSize="@dimen/textsize_subtitle2"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <View
+            android:id="@+id/dtva_line_overview"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_below="@id/dtva_tv_title_overview"
+            android:layout_alignStart="@id/dtva_tv_title_overview"
+            android:layout_alignEnd="@id/dtva_tv_title_overview"
+            android:background="@color/colorWhite"
+            app:layout_constraintRight_toRightOf="@id/dtva_tv_title_overview"
+            app:layout_constraintTop_toBottomOf="@id/dtva_tv_title_overview" />
 
-            <View
-                android:id="@+id/dtva_line_overview"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/_1sdp"
-                android:layout_below="@id/dtva_tv_title_overview"
-                android:layout_alignStart="@id/dtva_tv_title_overview"
-                android:layout_alignEnd="@id/dtva_tv_title_overview"
-                android:background="@color/colorWhite"
-                app:layout_constraintRight_toRightOf="@id/dtva_tv_title_overview"
-                app:layout_constraintTop_toBottomOf="@id/dtva_tv_title_overview" />
-
-            <TextView
-                android:id="@+id/dtva_tv_overview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/dtva_line_overview"
-                android:layout_marginStart="@dimen/mp_6"
-                android:layout_marginTop="@dimen/mp_4"
-                android:justificationMode="inter_word"
-                android:textColor="@color/colorWhite"
-                android:textSize="@dimen/textsize_body2"
-                app:layout_constraintTop_toBottomOf="@id/dtva_line_overview"
-                tools:text="Ini adalah contoh ringkasan dari abad ke 291 masehi hahahahaha hscabcakshcaljcvhas cabcakhcka" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/dtva_relativelayout_last_airing"
+        <TextView
+            android:id="@+id/dtva_tv_overview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/mp_10"
-            app:layout_constraintBottom_toTopOf="@id/dtva_relativelayout_next_airing"
-            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_below="@id/dtva_line_overview"
+            android:layout_marginStart="@dimen/mp_6"
+            android:layout_marginTop="@dimen/mp_4"
+            android:justificationMode="inter_word"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textsize_body2"
+            app:layout_constraintTop_toBottomOf="@id/dtva_line_overview"
+            tools:text="Ini adalah contoh ringkasan dari abad ke 291 masehi hahahahaha hscabcakshcaljcvhas cabcakhcka" />
+
+        <!--Episode terakhir yang tayang-->
+
+        <TextView
+            android:id="@+id/dtva_tv_title_last_airing"
+            style="@style/StyleTitleAiring"
+            android:layout_marginTop="@dimen/mp_20"
+            android:text="@string/string_dtva_last_episode_airing"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/relativeLayout"
-            app:layout_constraintVertical_bias="0.0">
+            app:layout_constraintTop_toBottomOf="@id/dtva_tv_overview" />
 
-            <TextView
-                android:id="@+id/dtva_tv_last_airing_not_exist"
-                style="@style/DTVTextAiring"
-                android:layout_below="@id/dtva_line_last_airing"
-                android:text="@string/string_last_airing_has_not_exist"
-                android:visibility="gone"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/dtva_line_last_airing" />
+        <View
+            android:id="@+id/dtva_line_last_airing"
+            style="@style/LineAiring"
+            android:layout_below="@id/dtva_tv_title_last_airing"
+            android:layout_alignStart="@id/dtva_tv_title_last_airing"
+            android:layout_alignEnd="@id/dtva_tv_title_last_airing"
+            app:layout_constraintRight_toRightOf="@id/dtva_tv_title_last_airing"
+            app:layout_constraintTop_toBottomOf="@id/dtva_tv_title_last_airing" />
 
-            <TextView
-                android:id="@+id/dtva_tv_title_last_airing"
-                style="@style/StyleTitleAiring"
-                android:text="@string/string_dtva_last_episode_airing"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <View
-                android:id="@+id/dtva_line_last_airing"
-                style="@style/LineAiring"
-                android:layout_below="@id/dtva_tv_title_last_airing"
-                android:layout_alignStart="@id/dtva_tv_title_last_airing"
-                android:layout_alignEnd="@id/dtva_tv_title_last_airing"
-                app:layout_constraintRight_toRightOf="@id/dtva_tv_title_last_airing"
-                app:layout_constraintTop_toBottomOf="@id/dtva_tv_title_last_airing" />
-
-            <ImageView
-                android:id="@+id/dtva_iv_poster_last_airing"
-                style="@style/DTVAImageAiring"
-                android:layout_below="@id/dtva_line_last_airing"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/dtva_line_last_airing" />
-
-            <TextView
-                android:id="@+id/dtva_tv_episode_last_airing"
-                style="@style/DTVTextAiring"
-                android:layout_below="@id/dtva_line_last_airing"
-                android:layout_marginTop="@dimen/mp_10"
-                android:layout_toEndOf="@id/dtva_iv_poster_last_airing"
-                app:layout_constraintLeft_toRightOf="@id/dtva_iv_poster_last_airing"
-                app:layout_constraintTop_toBottomOf="@id/dtva_line_last_airing"
-                tools:text="Episode 3" />
-
-            <TextView
-                android:id="@+id/dtva_tv_date_last_airing"
-                style="@style/DTVTextAiring"
-                android:layout_below="@id/dtva_tv_episode_last_airing"
-                android:layout_toEndOf="@id/dtva_iv_poster_last_airing"
-                app:layout_constraintLeft_toRightOf="@id/dtva_iv_poster_last_airing"
-                app:layout_constraintTop_toBottomOf="@id/dtva_tv_episode_last_airing"
-                tools:text="12 09 2019" />
-
-            <TextView
-                android:id="@+id/dtva_tv_overview_last_airing"
-                style="@style/DTVTextAiring"
-                android:layout_below="@id/dtva_tv_date_last_airing"
-                android:layout_toEndOf="@id/dtva_iv_poster_last_airing"
-                android:justificationMode="inter_word"
-                app:layout_constraintLeft_toRightOf="@id/dtva_iv_poster_last_airing"
-                app:layout_constraintTop_toBottomOf="@id/dtva_tv_date_last_airing"
-                tools:text="Overview" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/dtva_relativelayout_next_airing"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/mp_10"
-            android:layout_marginBottom="@dimen/_30sdp"
+        <TextView
+            android:id="@+id/dtva_tv_last_airing_not_exist"
+            style="@style/DTVTextAiring"
+            android:layout_below="@id/dtva_line_last_airing"
+            android:text="@string/string_last_airing_has_not_exist"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/mp_10"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dtva_line_last_airing" />
+
+        <ImageView
+            android:id="@+id/dtva_iv_poster_last_airing"
+            style="@style/DTVAImageAiring"
+            android:layout_below="@id/dtva_line_last_airing"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dtva_line_last_airing" />
+
+        <TextView
+            android:id="@+id/dtva_tv_episode_last_airing"
+            style="@style/DTVTextAiring"
+            android:layout_below="@id/dtva_line_last_airing"
+            android:layout_marginTop="@dimen/mp_10"
+            android:layout_toEndOf="@id/dtva_iv_poster_last_airing"
+            app:layout_constraintLeft_toRightOf="@id/dtva_iv_poster_last_airing"
+            app:layout_constraintTop_toBottomOf="@id/dtva_line_last_airing"
+            tools:text="Episode 3" />
+
+        <TextView
+            android:id="@+id/dtva_tv_date_last_airing"
+            style="@style/DTVTextAiring"
+            android:layout_below="@id/dtva_tv_episode_last_airing"
+            android:layout_toEndOf="@id/dtva_iv_poster_last_airing"
+            app:layout_constraintLeft_toRightOf="@id/dtva_iv_poster_last_airing"
+            app:layout_constraintTop_toBottomOf="@id/dtva_tv_episode_last_airing"
+            tools:text="12 09 2019" />
+
+        <TextView
+            android:id="@+id/dtva_tv_overview_last_airing"
+            style="@style/DTVTextAiring"
+            android:layout_below="@id/dtva_tv_date_last_airing"
+            android:layout_toEndOf="@id/dtva_iv_poster_last_airing"
+            android:justificationMode="inter_word"
+            app:layout_constraintLeft_toRightOf="@id/dtva_iv_poster_last_airing"
+            app:layout_constraintTop_toBottomOf="@id/dtva_tv_date_last_airing"
+            tools:text="Overview" />
+
+        <!--Episode yang akan tayang-->
+        <TextView
+            android:id="@+id/dtva_tv_title_next_airing"
+            style="@style/StyleTitleAiring"
+            android:layout_marginTop="@dimen/mp_20"
+            android:text="@string/string_dtva_next_episode_airing"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dtva_tv_overview_last_airing" />
+
+        <View
+            android:id="@+id/dtva_line_next_airing"
+            style="@style/LineAiring"
+            android:layout_below="@id/dtva_tv_title_next_airing"
+            android:layout_alignStart="@id/dtva_tv_title_next_airing"
+            android:layout_alignEnd="@id/dtva_tv_title_next_airing"
+            app:layout_constraintRight_toRightOf="@id/dtva_tv_title_next_airing"
+            app:layout_constraintTop_toBottomOf="@id/dtva_tv_title_next_airing" />
+
+        <TextView
+            android:id="@+id/dtva_tv_next_airing_not_exist"
+            style="@style/DTVTextAiring"
+            android:layout_below="@id/dtva_line_next_airing"
+            android:text="@string/string_last_airing_has_not_exist"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/mp_20"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/dtva_relativelayout_last_airing">
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dtva_line_next_airing" />
 
-            <TextView
-                android:id="@+id/dtva_tv_title_next_airing"
-                style="@style/StyleTitleAiring"
-                android:text="@string/string_dtva_next_episode_airing"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/dtva_iv_poster_next_airing"
+            style="@style/DTVAImageAiring"
+            android:layout_below="@id/dtva_line_next_airing"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dtva_line_next_airing" />
 
-            <View
-                app:layout_constraintTop_toBottomOf="@id/dtva_tv_title_next_airing"
-                app:layout_constraintRight_toRightOf="@id/dtva_tv_title_next_airing"
-                android:id="@+id/dtva_line_next_airing"
-                style="@style/LineAiring"
-                android:layout_below="@id/dtva_tv_title_next_airing"
-                android:layout_alignStart="@id/dtva_tv_title_next_airing"
-                android:layout_alignEnd="@id/dtva_tv_title_next_airing" />
+        <TextView
+            android:id="@+id/dtva_tv_episode_next_airing"
+            style="@style/DTVTextAiring"
+            android:layout_below="@id/dtva_line_next_airing"
+            android:layout_marginTop="@dimen/mp_10"
+            android:layout_toEndOf="@id/dtva_iv_poster_next_airing"
+            app:layout_constraintLeft_toRightOf="@id/dtva_iv_poster_next_airing"
+            app:layout_constraintTop_toBottomOf="@id/dtva_line_next_airing"
+            tools:text="Episode 3" />
 
-            <TextView
-                app:layout_constraintTop_toBottomOf="@id/dtva_line_next_airing"
-                app:layout_constraintLeft_toLeftOf="parent"
-                android:id="@+id/dtva_tv_next_airing_not_exist"
-                style="@style/DTVTextAiring"
-                android:layout_below="@id/dtva_line_next_airing"
-                android:text="@string/string_last_airing_has_not_exist"
-                android:visibility="gone" />
+        <TextView
+            android:id="@+id/dtva_tv_date_next_airing"
+            style="@style/DTVTextAiring"
+            android:layout_below="@id/dtva_tv_episode_next_airing"
+            android:layout_toEndOf="@id/dtva_iv_poster_next_airing"
+            app:layout_constraintLeft_toRightOf="@id/dtva_iv_poster_next_airing"
+            app:layout_constraintTop_toBottomOf="@id/dtva_tv_episode_next_airing"
+            tools:text="12 09 2019" />
 
-            <ImageView
-                app:layout_constraintTop_toBottomOf="@id/dtva_line_next_airing"
-                app:layout_constraintLeft_toLeftOf="parent"
-                android:id="@+id/dtva_iv_poster_next_airing"
-                style="@style/DTVAImageAiring"
-                android:layout_below="@id/dtva_line_next_airing" />
-
-            <TextView
-                app:layout_constraintTop_toBottomOf="@id/dtva_line_next_airing"
-                app:layout_constraintLeft_toRightOf="@id/dtva_iv_poster_next_airing"
-                android:id="@+id/dtva_tv_episode_next_airing"
-                style="@style/DTVTextAiring"
-                android:layout_below="@id/dtva_line_next_airing"
-                android:layout_marginTop="@dimen/mp_10"
-                android:layout_toEndOf="@id/dtva_iv_poster_next_airing"
-                tools:text="Episode 3" />
-
-            <TextView
-                app:layout_constraintTop_toBottomOf="@id/dtva_tv_episode_next_airing"
-                app:layout_constraintLeft_toRightOf="@id/dtva_iv_poster_next_airing"
-                android:id="@+id/dtva_tv_date_next_airing"
-                style="@style/DTVTextAiring"
-                android:layout_below="@id/dtva_tv_episode_next_airing"
-                android:layout_toEndOf="@id/dtva_iv_poster_next_airing"
-                tools:text="12 09 2019" />
-
-            <TextView
-                app:layout_constraintTop_toBottomOf="@id/dtva_tv_date_next_airing"
-                app:layout_constraintLeft_toRightOf="@id/dtva_iv_poster_next_airing"
-                android:id="@+id/dtva_tv_overview_next_airing"
-                style="@style/DTVTextAiring"
-                android:layout_below="@id/dtva_tv_date_next_airing"
-                android:layout_toEndOf="@id/dtva_iv_poster_next_airing"
-                android:justificationMode="inter_word"
-                tools:text="Overview" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/dtva_tv_overview_next_airing"
+            style="@style/DTVTextAiring"
+            android:layout_below="@id/dtva_tv_date_next_airing"
+            android:layout_toEndOf="@id/dtva_iv_poster_next_airing"
+            android:justificationMode="inter_word"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/dtva_iv_poster_next_airing"
+            app:layout_constraintTop_toBottomOf="@id/dtva_tv_date_next_airing"
+            tools:text="Overview" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </ScrollView>
