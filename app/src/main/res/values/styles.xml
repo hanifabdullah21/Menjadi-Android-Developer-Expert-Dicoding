@@ -17,6 +17,7 @@
         <item name="android:orientation">vertical</item>
         <item name="android:layout_weight">1</item>
         <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/mp_20</item>
     </style>
 
     <!--Used for title of popularity, vote, vote average-->
