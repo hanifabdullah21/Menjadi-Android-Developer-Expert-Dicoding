@@ -12,6 +12,7 @@ import com.singpaulee.made_dicoding.bank.ConstantTemplate
 import com.singpaulee.made_dicoding.helper.HelperClass
 import com.singpaulee.made_dicoding.model.DescriptionTvModel
 import kotlinx.android.synthetic.main.activity_detail_tv.*
+import kotlinx.android.synthetic.main.view_information.*
 import org.jetbrains.anko.toast
 import java.util.*
 
@@ -82,10 +83,10 @@ class DetailTvActivity : AppCompatActivity(), DetailTvView {
         dtva_tv_overview.text =
             if (tv?.overview == null || tv?.overview == "") resources.getString(R.string.string_overview_tv_has_not_exist) else tv?.overview
 
-        dtva_tv_rating.text = tv?.vote_average.toString()
-        dtva_tv_popularity.text =
+        vi_tv_rating.text = tv?.vote_average.toString()
+        vi_tv_popularity.text =
             if (tv?.popularity == null) "-" else String.format("%.1f", tv?.popularity)
-        dtva_tv_vote_count.text =
+        vi_tv_voted.text =
             if (tv?.vote_count == null) "-" else tv?.vote_count.toString()
 
         tv?.last_episode_to_air?.let {

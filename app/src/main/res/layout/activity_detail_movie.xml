@@ -28,6 +28,15 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#75000000"
+            app:layout_constraintBottom_toBottomOf="@id/dma_iv_backdrop"
+            app:layout_constraintLeft_toLeftOf="@id/dma_iv_backdrop"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/dma_iv_backdrop" />
+
+        <ImageView
             android:id="@+id/dma_iv_poster"
             android:layout_width="@dimen/_120sdp"
             android:layout_height="@dimen/_180sdp"
@@ -42,52 +51,35 @@
             app:layout_constraintTop_toTopOf="@+id/dma_iv_backdrop"
             app:layout_constraintVertical_bias="0.369" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.constraintlayout.widget.Group
             android:id="@+id/dma_viewgroup_adult"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@id/dma_iv_poster"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginEnd="@dimen/mp_4"
-            android:layout_toEndOf="@id/dma_iv_poster"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="@+id/dma_iv_backdrop"
-            app:layout_constraintEnd_toEndOf="@+id/dma_iv_backdrop"
-            app:layout_constraintHorizontal_bias="0.048"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:constraint_referenced_ids="dma_lottie_eightheen,dma_tv_warning_adult"
             app:layout_constraintLeft_toRightOf="@id/dma_iv_poster"
-            app:layout_constraintStart_toEndOf="@+id/dma_iv_poster"
-            app:layout_constraintTop_toTopOf="@+id/dma_iv_poster"
-            app:layout_constraintVertical_bias="0.0">
+            app:layout_constraintTop_toTopOf="@id/dma_iv_poster" />
 
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/dma_lottie_eightheen"
-                android:layout_width="@dimen/_30sdp"
-                android:layout_height="@dimen/_30sdp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.011"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0"
-                app:lottie_autoPlay="true"
-                app:lottie_fileName="lottie_atention.json"
-                app:lottie_loop="true" />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/dma_lottie_eightheen"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            app:layout_constraintLeft_toRightOf="@id/dma_iv_poster"
+            app:layout_constraintTop_toTopOf="@id/dma_iv_poster"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="lottie_atention.json"
+            app:lottie_loop="true" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/string_dma_adult"
-                android:textColor="@color/colorWhite"
-                android:textSize="@dimen/textsize_subtitle1"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.313"
-                app:layout_constraintLeft_toLeftOf="@id/dma_lottie_eightheen"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.454" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/dma_tv_warning_adult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_dma_adult"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textsize_subtitle1"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/dma_lottie_eightheen"
+            app:layout_constraintLeft_toRightOf="@id/dma_lottie_eightheen"
+            app:layout_constraintTop_toTopOf="@id/dma_lottie_eightheen" />
 
         <TextView
             android:id="@+id/dma_tv_title"
@@ -164,113 +156,17 @@
             app:layout_constraintBottom_toBottomOf="@+id/dma_iv_poster"
             app:layout_constraintEnd_toEndOf="@+id/dma_iv_backdrop"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/dma_iv_poster"
+            app:layout_constraintStart_toEndOf="@id/dma_iv_poster"
             app:layout_constraintTop_toBottomOf="@+id/dma_tv_duration"
             app:layout_constraintVertical_bias="1.0" />
 
-
-        <!--Peringkat-->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/dma_cl_rating"
-            style="@style/ViewGroupInfo"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/dma_iv_poster">
-
-            <TextView
-                android:id="@+id/dma_tv_title_rating"
-                style="@style/StyleTitleInfo"
-                android:text="@string/string_dma_rating"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/dma_tv_rating"
-                style="@style/StyleBodyInfo"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/dma_tv_title_rating"
-                tools:text="136" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <!--Poplarity-->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/dma_cl_popularity"
-            style="@style/ViewGroupInfo"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="@id/dma_view_one"
-            app:layout_constraintTop_toBottomOf="@id/dma_iv_poster">
-
-            <TextView
-                android:id="@+id/dma_tv_title_popularity"
-                style="@style/StyleTitleInfo"
-                android:text="@string/string_dma_popularity"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.105" />
-
-            <TextView
-                android:id="@+id/dma_tv_popularity"
-                style="@style/StyleBodyInfo"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/dma_tv_title_popularity"
-                tools:text="136" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <!--Voting-->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/dma_cl_vote_count"
-            style="@style/ViewGroupInfo"
-            app:layout_constraintLeft_toLeftOf="@id/dma_view_two"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/dma_iv_poster">
-
-            <TextView
-                android:id="@+id/dma_tv_title_vote_count"
-                style="@style/StyleTitleInfo"
-                android:text="@string/string_dma_vote_count"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.105" />
-
-            <TextView
-                android:id="@+id/dma_tv_vote_count"
-                style="@style/StyleBodyInfo"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/dma_tv_title_vote_count"
-                tools:text="136" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <View
-            android:id="@+id/dma_view_one"
-            style="@style/LineInfo"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="@id/dma_cl_popularity"
-            app:layout_constraintLeft_toRightOf="@id/dma_cl_popularity"
-            app:layout_constraintRight_toLeftOf="@id/dma_cl_rating"
-            app:layout_constraintTop_toTopOf="@id/dma_cl_popularity" />
-
-        <View
-            android:id="@+id/dma_view_two"
-            style="@style/LineInfo"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="@id/dma_cl_popularity"
-            app:layout_constraintLeft_toRightOf="@id/dma_cl_rating"
-            app:layout_constraintRight_toLeftOf="@id/dma_cl_vote_count"
-            app:layout_constraintTop_toTopOf="@id/dma_cl_popularity" />
-
+        <include
+            android:id="@+id/dma_view_information"
+            layout="@layout/view_information"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mp_20"
+            app:layout_constraintTop_toBottomOf="@id/dma_tv_favorite" />
 
         <TextView
             android:id="@+id/dma_tv_title_overview"
@@ -281,7 +177,7 @@
             android:textColor="@color/colorWhite"
             android:textSize="@dimen/textsize_subtitle2"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/dma_cl_popularity" />
+            app:layout_constraintTop_toBottomOf="@id/dma_view_information" />
 
         <View
             android:id="@+id/dma_line_overview"

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.67" />
+
+    <TextView
+        android:id="@+id/vi_tv_title_popularity"
+        style="@style/StyleTitleInfo"
+        android:layout_width="0dp"
+        android:text="@string/string_dma_popularity"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/vi_tv_popularity"
+        style="@style/StyleBodyInfo"
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toLeftOf="@id/vi_tv_title_popularity"
+        app:layout_constraintRight_toRightOf="@id/vi_tv_title_popularity"
+        app:layout_constraintTop_toBottomOf="@id/vi_tv_title_popularity"
+        tools:text="136" />
+
+    <TextView
+        android:id="@+id/vi_tv_title_rating"
+        style="@style/StyleTitleInfo"
+        android:layout_width="wrap_content"
+        android:text="@string/string_dtva_rating"
+        app:layout_constraintLeft_toRightOf="@id/guideline"
+        app:layout_constraintRight_toRightOf="@id/guideline2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/vi_tv_rating"
+        style="@style/StyleBodyInfo"
+        app:layout_constraintLeft_toLeftOf="@id/vi_tv_title_rating"
+        app:layout_constraintRight_toRightOf="@id/vi_tv_title_rating"
+        app:layout_constraintTop_toBottomOf="@id/vi_tv_title_rating"
+        tools:text="136" />
+
+    <TextView
+        android:id="@+id/vi_tv_title_voted"
+        style="@style/StyleTitleInfo"
+        android:layout_width="0dp"
+        android:text="@string/string_dtva_rating"
+        app:layout_constraintLeft_toRightOf="@id/guideline2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/vi_tv_voted"
+        style="@style/StyleBodyInfo"
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toLeftOf="@id/vi_tv_title_voted"
+        app:layout_constraintRight_toRightOf="@id/vi_tv_title_voted"
+        app:layout_constraintTop_toBottomOf="@id/vi_tv_title_voted"
+        tools:text="136" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

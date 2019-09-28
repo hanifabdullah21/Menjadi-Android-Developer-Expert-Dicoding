@@ -11,6 +11,7 @@ import com.singpaulee.made_dicoding.R
 import com.singpaulee.made_dicoding.bank.ConstantTemplate
 import com.singpaulee.made_dicoding.model.DescriptionMovieModel
 import kotlinx.android.synthetic.main.activity_detail_movie.*
+import kotlinx.android.synthetic.main.view_information.*
 import org.jetbrains.anko.toast
 import java.util.*
 
@@ -57,10 +58,10 @@ class DetailMovieActivity : AppCompatActivity(), DetailMovieView {
             if (movie?.overview == null || movie?.overview == "") resources.getString(R.string.string_overview_has_not_exist) else movie?.overview
         dma_tv_title.text = movie?.originalTitle.toString()
         dma_tv_year.text = presenter?.getYearFromDate(movie?.releaseDate.toString())
-        dma_tv_rating.text = movie?.voteAverage.toString()
-        dma_tv_popularity.text =
+        vi_tv_rating.text = movie?.voteAverage.toString()
+        vi_tv_popularity.text =
             if (movie?.popularity == null) "-" else String.format("%.1f", movie?.popularity)
-        dma_tv_vote_count.text =
+        vi_tv_voted.text =
             if (movie?.voteCount == null) "-" else movie?.voteCount.toString()
         dma_tv_duration.text = presenter?.convertDuration(movie?.runtime)
     }
